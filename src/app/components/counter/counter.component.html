@@ -9,7 +9,7 @@
         <button class="btn btn btn-outline-success">Generate Box</button>
       </div>
       <div class="card-footer text-muted">
-        Total : {{numberBoxes}} boxes
+        Total : {{numberBoxes$ | async}} boxes
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
 
 <div class="row offset-3">
 
-  <div class="col-sm-2" *ngFor="let item of [].constructor(numberBoxes);">
+  <div class="col-sm-2" *ngFor="let item of [].constructor(numberBoxes$ | async);">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Box</h5>
